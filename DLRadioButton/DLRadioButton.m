@@ -232,9 +232,13 @@ static BOOL _groupModifing = NO;
     if (self.isMultipleSelectionEnabled) {
         [super setSelected:!self.isSelected];
     } else {
-        [super setSelected:selected];
-        if (selected) {
-            [self deselectOtherButtons];
+        if (self.selected == YES) {
+            [super setSelected:NO];
+        } else {
+            [super setSelected:selected];
+            if (selected) {
+                [self deselectOtherButtons];
+            }
         }
     }
 }
