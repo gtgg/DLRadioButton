@@ -89,6 +89,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, getter = isMultipleSelectionEnabled) BOOL multipleSelectionEnabled;
 
+
+@property (nonatomic) BOOL isSingleSelectCanCancel;
+
 /**
  * @brief Duration of radio button icon animation in seconds. Set it to 0.0 to turn off animation, default is 0.3.
  */

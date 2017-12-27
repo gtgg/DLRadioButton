@@ -232,7 +232,7 @@ static BOOL _groupModifing = NO;
     if (self.isMultipleSelectionEnabled) {
         [super setSelected:!self.isSelected];
     } else {
-        if (self.selected == YES) {
+        if (self.selected == YES && self.isSingleSelectCanCancel == YES) {
             [super setSelected:NO];
         } else {
             [super setSelected:selected];
